@@ -1,6 +1,7 @@
 >> Workspace:  workspace contains the files for one or more projects.
 
->> project: is the set of files that comprise an app, a library, or end-to-end (e2e) tests.
+>> project: is the set of files that comprise an app, a library, or end-to-end (e2e)
+tests.
 
 >> creating a new workspace: ng new <workspace-name>
 files that created in the workspace:
@@ -11,7 +12,5 @@ files that created in the workspace:
 >> serving application: ng serve --open 
     Starts the development server and watching the source files.
     --open flag opens a browser to http://localhost:4200/.
-
->> component: the fundamental building blocks of Angular applications.
 
 >> Angular's interpolation binding syntax: {{  }}

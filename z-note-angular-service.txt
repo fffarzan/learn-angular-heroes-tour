@@ -1,0 +1,54 @@
+>> Service:
+    1-Services are a great way to share information among classes that 
+    don't know each other.
+
+==========================================================================
+
+>> Creting a Service: 
+    ng g service <name>
+
+==========================================================================
+
+>> @Injectable(): 
+    1-The service imports the `Injectable` symbol and annotates the 
+    class with the `@Injectable()` decorator.
+    2-This decorator marks the class as one that participates in the 
+    dependency injection system.
+    3-Accepts a metadata object for the service.
+
+==========================================================================
+
+>> Providing:
+    1-It is something that can create or deliver a service. 
+    2-Provider Registering: Make a service available to the dependency 
+    injection system before Angular can inject it into the component.
+
+==========================================================================
+
+>> providedIn: 'root' metadata:
+    1-With providing the service at the root level, Angular creates a 
+    single, shared instance of service and injects into any class that
+    asks for it.
+
+==========================================================================
+
+>> synchronous signature:
+    This will not work in a real app. Because a remote server is 
+    an inherently asynchronous operation.
+    The service must wait for the server to respond, exampleMethod() 
+    cannot return immediately with the data, and the browser will not 
+    block while the service waits.
+
+==========================================================================
+
+>> Observable:
+    1-One of the key classes in the `RxJS` library.
+    2-Angular's `HttpClient` methods return RxJS Observables.
+    3-Simulate getting data from the server with the RxJS `of()` function.
+    4-subscribe(): This method passes the emitted array to the callback.
+
+==========================================================================
+
+>> "service-in-service" scenario:
+    you inject a service into the other service which is injected 
+    into the target component.

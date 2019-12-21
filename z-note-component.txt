@@ -1,0 +1,34 @@
+>> component: the fundamental building blocks of Angular applications.
+
+==========================================================================
+
+>> @Component:
+    1-is a decorator function that specifies the Angular metadata for the component.
+    2-For creating a conponent class
+    3-imported from `@angular/core`
+
+==========================================================================
+
+>> export: 
+    1-Always export the component class so you can import it elsewhere ... like in
+    the AppModule!
+    2-With `export`, we can use everything in other ts filesc with importing on 
+    that file.
+
+==========================================================================
+
+>> Keeping all features in one component as the application grows will not be 
+maintainable. You'll want to split up large components into smaller sub-components, 
+each focused on a specific task or workflow.
+
+==========================================================================
+
+>> styling: 
+    1-every component just need "one" html file, but it can accept many style files in
+    `@Component` decorator. 
+    2-Styles and stylesheets identified in `@Component` metadata are scoped to that 
+    specific component.
+
+==========================================================================
+
+>> Constructor:

@@ -1,0 +1,15 @@
+<!-- 
+  * Using `ngIf` to prevent crashing the app when initializing.
+  * When `hero` is undefined, the `ngIf` removes the hero detail from the DOM. 
+  There are no `hero` bindings to consider. 
+-->
+<div *ngIf="hero">
+  <!-- Using built-in UpperCasePipe with pipe operator: | -->
+  <h2>{{ hero.name | uppercase }} Details</h2>
+  <div><span>Id: </span>{{ hero.id }}</div>
+  <div>
+    <label>Name:
+      <input type="text" [(ngModel)]="hero.name" placeholder="name">
+    </label>
+  </div>
+</div>

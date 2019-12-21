@@ -1,0 +1,15 @@
+<h2>My Heroes</h2>
+
+<ul class="heroes">
+  <li *ngFor="let hero of heroes" 
+    (click)="onSelect(hero)" 
+    [class.selected]="hero === selectedHero">
+    <span class="badge">Id: {{ hero.id }}</span> Name: {{ hero.name }}
+  </li>
+</ul>
+
+<!-- 
+  * Binding the `HeroesComponent.selectedHero` to the element's `hero` property.
+  * [hero]: an example of property binding.
+-->
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>

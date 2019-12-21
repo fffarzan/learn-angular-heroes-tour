@@ -1,0 +1,4 @@
+>> Input From Parent Component:
+    1-to define an input property in the current component.
+    2-with a decorator: @Input ---> import { Input } from '@angular/core'
+    3-binding: [xxx]="yyy" (an attribute binding).
