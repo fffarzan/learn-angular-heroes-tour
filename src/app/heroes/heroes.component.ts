@@ -11,10 +11,11 @@ import { HeroService } from '../hero.service';
 export class HeroesComponent implements OnInit {
   heroes: Hero[];  // expose HEROES array.
 
-  selectedHero: Hero;
-  onSelect(hero: Hero): void {  // an object will be recieved from template with `Hero` class type.
-    this.selectedHero = hero;
-  }
+  /** Without routing over hero-detail component */ 
+  // selectedHero: Hero;
+  // onSelect(hero: Hero): void {  // an object will be recieved from template with `Hero` class type.
+  //   this.selectedHero = hero;
+  // }
 
   /** @-The parameter simultaneously defines a private heroService property and
     * identifies it as a HeroService injection site.
@@ -34,7 +35,7 @@ export class HeroesComponent implements OnInit {
   /** Asynchronous signature */
   getHeroes(): void {
     this.heroService.getHeroes()
-      .subscribe(heroes => this.heroes = heroes)  // `subscribe` is like `promise` in js!
+      .subscribe(heroes => this.heroes = heroes);  // `subscribe` is like `promise` in js!
   }
 
 }

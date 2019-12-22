@@ -1,15 +1,25 @@
 <h2>My Heroes</h2>
 
-<ul class="heroes">
+<!-- Without routing over hero-detail component -->
+<!-- <ul class="heroes">
   <li *ngFor="let hero of heroes" 
     (click)="onSelect(hero)" 
     [class.selected]="hero === selectedHero">
-    <span class="badge">Id: {{ hero.id }}</span> Name: {{ hero.name }}
+    <span class="badge">{{ hero.id }}</span> {{ hero.name }}
   </li>
-</ul>
-
+</ul> -->
 <!-- 
   * Binding the `HeroesComponent.selectedHero` to the element's `hero` property.
   * [hero]: an example of property binding.
 -->
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+<!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->
+
+
+<!-- With routing over hero-detail component -->
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{ hero.id }}</span> {{ hero.name }}
+    </a>
+  </li>
+</ul>

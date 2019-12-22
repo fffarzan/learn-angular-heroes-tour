@@ -1,6 +1,10 @@
+==========================================================================
+
 >> ngOnInit(): 
-    1-a lifecycle hook.
-    2-Angular calls ngOnInit() shortly after creating a component. It 
+    1- A lifecycle hook.
+    2- Angular calls ngOnInit() shortly after creating a component. It 
     calls ngOnInit() at an appropriate time after constructing a 
     component instance.
-    3-a good place to put initialization logic.
+    3- A good place to put initialization logic.
+
+==========================================================================

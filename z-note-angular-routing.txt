@@ -1,0 +1,71 @@
+==========================================================================
+
+>> Best Practice:
+    to load and configure the router in a separate, top-level module that 
+    is dedicated to routing and imported by the root AppModule.
+
+==========================================================================
+
+>> Creating `app-routing.module.ts`:
+    ng generate module app-routing --flat --module=app
+        a) --flat puts the file in src/app instead of its own folder.
+        b) --module=app tells the CLI to register it in the imports array 
+        of the AppModule.
+
+==========================================================================
+
+>> Routes:
+    1-tell the Router which view to display when a user clicks a link or 
+    pastes a URL into the browser address bar.
+    2-path: a string that matches the URL in the browser address bar.
+    3-component: the component that the router should create when 
+    navigating to this route.
+
+==========================================================================
+
+>> RouterModule.forRoot()
+    The method is called forRoot() because you configure the router at the 
+    application's root level. The forRoot() method supplies the service 
+    providers and directives needed for routing, and performs the initial 
+    navigation based on the current browser URL.
+
+==========================================================================
+
+>> @ngModule in routing file:
+    1-matadata initializes the router and starts it listening for browser 
+    location changes
+    2-imports: [ RouterModule.forRoot(routes) ]
+        adds the RouterModule to the AppRoutingModule imports array and 
+        configures it with the routes in one step by calling RouterModule.forRoot()
+    3- exports: [ RouterModule ]
+        it will be available throughout the app.
+
+>> RouterOutlet:
+    1-tells the router where to display routed views.
+    2-is one of the router directives that became available to the 
+    AppComponent (because AppModule imports AppRoutingModule which 
+    exported RouterModule).
+    3-a directives in the RouterModule.
+
+>> RouterLink:
+    1-routerLink="/heroes"
+             or
+    [routerLink]="['/heroes']
+        a) routerLink is the selector for the RouterLink directive 
+        that turns user clicks into router navigations.
+        b) public directives in the RouterModule.
+
+>> ActivatedRoute Module:
+    1-holds information about the route to this instance of the component. the component is interested in the route's parameters extracted from the URL
+
+>> Location Service:
+    an Angular service for interacting with the browser.
+
+>> route.snapshot:
+    static image of the route information shortly after the component was created.
+
+>> paramMap:
+    is a dictionary of route parameter values extracted from the URL.
+
+>> +:
+    The JavaScript (+) operator converts the string to a number.

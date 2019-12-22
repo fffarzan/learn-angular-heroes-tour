@@ -1,5 +1,8 @@
+==========================================================================
+==============================Definition==================================
+
 >> Service:
-    1-Services are a great way to share information among classes that 
+    1- Services are a great way to share information among classes that 
     don't know each other.
 
 ==========================================================================
@@ -9,46 +12,70 @@
 
 ==========================================================================
 
+>> "service-in-service" Scenario:
+    Injecting a service into the other service which is injected 
+    into the target component.
+
+==========================================================================
+=============================Fundamental==================================
+
 >> @Injectable(): 
-    1-The service imports the `Injectable` symbol and annotates the 
-    class with the `@Injectable()` decorator.
-    2-This decorator marks the class as one that participates in the 
+    1- This decorator marks the class as one that participates in the 
     dependency injection system.
-    3-Accepts a metadata object for the service.
+    2- Accepts a metadata object for the service.
+    3- Imported from `@angular/core`
 
 ==========================================================================
 
 >> Providing:
-    1-It is something that can create or deliver a service. 
-    2-Provider Registering: Make a service available to the dependency 
+    1- It is something that can create or deliver a service. 
+    2- Provider Registering: Make a service available to the dependency 
     injection system before Angular can inject it into the component.
 
 ==========================================================================
 
->> providedIn: 'root' metadata:
-    1-With providing the service at the root level, Angular creates a 
+>> Metadata: 
+    1- `providedIn: 'root'`
+    2- With providing the service at the root level, Angular creates a 
     single, shared instance of service and injects into any class that
     asks for it.
 
 ==========================================================================
+=============================Usage========================================
 
->> synchronous signature:
-    This will not work in a real app. Because a remote server is 
-    an inherently asynchronous operation.
-    The service must wait for the server to respond, exampleMethod() 
+>> Synchronous Signature:
+    1- The service must wait for the server to respond, so exampleMethod() 
     cannot return immediately with the data, and the browser will not 
-    block while the service waits.
+    block while the service waits. Then the app will crash.
+    2- This will not work in a real app. Because a remote server is 
+    an inherently asynchronous operation.
+    3- This approch can be used when the service was on the server (like
+    local server).
+
+==========================================================================
+
+>> Asynchronous Signature:
 
 ==========================================================================
 
 >> Observable:
-    1-One of the key classes in the `RxJS` library.
-    2-Angular's `HttpClient` methods return RxJS Observables.
-    3-Simulate getting data from the server with the RxJS `of()` function.
-    4-subscribe(): This method passes the emitted array to the callback.
+    1- One of the key classes in the `RxJS` library.
+    2- Angular's `HttpClient` methods return RxJS Observables.
+    3- Simulate getting data from the server with the RxJS `of()` function.
+    4- Best tool for creating asynchronous services.
+    5- Imported from 'rxjs'.
 
 ==========================================================================
 
->> "service-in-service" scenario:
-    you inject a service into the other service which is injected 
-    into the target component.
+>> of():
+    1- `of(ex.)` returns an observable <Hero[]> emits a "single value", 
+    an array of data from the body of the HTTP response.
+    2- Imported from 'rxjs'.
+
+==========================================================================
+
+>> subscribe():
+    This method passes the emitted array to the callback (like `then` in
+    js or `success` in c#).
+
+==========================================================================

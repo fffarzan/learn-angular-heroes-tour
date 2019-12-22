@@ -1,16 +1,35 @@
->> Workspace:  workspace contains the files for one or more projects.
+==========================================================================
+==============================Basic-Definition============================
 
->> project: is the set of files that comprise an app, a library, or end-to-end (e2e)
-tests.
+>> Workspace:  
+    workspace contains the files for one or more projects.
 
->> creating a new workspace: ng new <workspace-name>
-files that created in the workspace:
-1-inital skeleton app project: src subfolder.
-2-end-to-end test project: e2e subfolder.
-3-configuration files.
+==========================================================================
 
->> serving application: ng serve --open 
-    Starts the development server and watching the source files.
-    --open flag opens a browser to http://localhost:4200/.
+>> Project: 
+    Is the set of files that comprise an app, a library, or 
+    end-to-end (e2e)tests.
+
+==========================================================================
+==============================Installing-&-Beginning======================
+
+>> Creating a New Workspace: 
+    1- ng new <workspace-name>
+    2- Files that created in the workspace:
+        a) inital skeleton app project: src subfolder.
+        b) end-to-end test project: e2e subfolder.
+        c) configuration files.
+
+==========================================================================
+
+>> Serving Application: 
+    1- ng serve --open
+        a) Starts the development server and watching the source files.
+        b) --open flag opens a browser to http://localhost:4200/.\
+
+==========================================================================
 
 >> Angular's interpolation binding syntax: {{  }}
+
+>> backticks ( ` ) that define a JavaScript template literal for embedding 
+the id.

@@ -1,19 +1,35 @@
->> class binding: 
-    1-makes it easy to add and remove a CSS class conditionally.
-    2-syntax: [class.some-css-class]="some-condition".
+==========================================================================
 
->> event binding: like: (click)=""
-    The parentheses around `click` tell Angular to listen for the target element's click 
-    event.
+>> One-Way Data Binding: 
+    1- data flows from the component class out to the screen.
+    2- "property binding" is a one-way data binding.
 
->> [(ngModel)]: 
-    1-is Angular's two-way data binding syntax.
-    2-Although ngModel is a valid Angular directive, it isn't available by default.
-    3-for using: import { FormsModule } from '@angular/forms' --> in `app.module.ts`.
+==========================================================================
 
->> one-way databinding: 
-    1-data flows from the component class out to the screen.
-    2-"property binding" is a one-way data binding.
+>> Two-Way Data Binding
+    1- Means data flows from the component class out to the screen and 
+    from the screen back to the class.
+    2- Syntax: [(ngModel)]
+    3- Although `ngModel` is a valid Angular directive, it isn't 
+    available by default.
+    For using: 
+    import {FormsModule} from '@angular/forms' --> in `app.module.ts`.
 
->> two-way databinding: means data flows from the component class out to the screen and 
-from the screen back to the class.
+==========================================================================
+
+>> Event Binding: 
+    1- Syntax: like --> (click)=""
+    2- The parentheses around `click` tell Angular to listen for the 
+    target element's click event.
+
+==========================================================================
+
+>> Attribute Binding:
+
+==========================================================================
+
+>> Class Binding: 
+    1- Makes it easy to add and remove a CSS class conditionally.
+    2- syntax: [class.some-css-class]="some-condition".
+
+==========================================================================
