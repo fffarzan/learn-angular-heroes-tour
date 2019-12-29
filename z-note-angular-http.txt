@@ -1,0 +1,16 @@
+NOTE: 
+    1- We use `In-memory Web API` module to mimic communication with a
+    remote data. 
+    2- When the server is ready, the In-memory Web API will be detach  , 
+    and the app's requests will go through to the server.
+    3- Installing:
+        npm install angular-in-memory-web-api --save
+    4- The `HttpClientInMemoryWebApiModule` module intercepts HTTP 
+    requests and returns simulated server responses.
+
+
+>> Definition:
+    Angular's mechanism for communicating with a remote server over HTTP.
+
+>> Installation:
+    1- 
